@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>castep_outputs.castep_res &#8212; castep-outputs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/castep_outputs/castep_res';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">castep-outputs</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    castep_outputs
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Install</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">castep outputs demo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_autosummary/castep_outputs.html">castep_outputs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.args.html">castep_outputs.args</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.castep_file_parser.html">castep_outputs.castep_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.castep_outputs_main.html">castep_outputs.castep_outputs_main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.castep_res.html">castep_outputs.castep_res</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.cell_param_file_parser.html">castep_outputs.cell_param_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.constants.html">castep_outputs.constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.extra_files_parser.html">castep_outputs.extra_files_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.md_geom_file_parser.html">castep_outputs.md_geom_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.utility.html">castep_outputs.utility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_modules/castep_outputs/castep_res.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for castep_outputs.castep_res</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; Module containing all regexes &quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="kn">from</span> <span class="nn">.constants</span> <span class="kn">import</span> <span class="n">MINIMISERS</span><span class="p">,</span> <span class="n">SHELLS</span><span class="p">,</span> <span class="n">FST_D</span>
+
+
+<div class="viewcode-block" id="get_numbers"><a class="viewcode-back" href="../../_autosummary/castep_outputs.castep_res.html#castep_outputs.castep_res.get_numbers">[docs]</a><span class="k">def</span> <span class="nf">get_numbers</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Get all numbers in a string as a list &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">NUMBER_RE</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">line</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_block"><a class="viewcode-back" href="../../_autosummary/castep_outputs.castep_res.html#castep_outputs.castep_res.get_block">[docs]</a><span class="k">def</span> <span class="nf">get_block</span><span class="p">(</span><span class="n">init_line</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">in_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">,</span>
+              <span class="n">start</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">Pattern</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">Pattern</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">cnt</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="n">out_fmt</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">,</span> <span class="n">eof_possible</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Check if line is the start of a block and return</span>
+<span class="sd">    the block if it is, moving in_file forward as it does so &quot;&quot;&quot;</span>
+
+    <span class="n">block</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">init_line</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">block</span>
+
+    <span class="n">block</span> <span class="o">=</span> <span class="n">init_line</span>
+    <span class="n">fnd</span> <span class="o">=</span> <span class="n">cnt</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">in_file</span><span class="p">:</span>
+        <span class="n">block</span> <span class="o">+=</span> <span class="n">line</span>
+        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+            <span class="n">fnd</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">fnd</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">eof_possible</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected end of file in </span><span class="si">{</span><span class="n">in_file</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;Unexpected end of file.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">block</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">out_fmt</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">block</span>
+    <span class="k">if</span> <span class="n">out_fmt</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">block</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">out_fmt</span> <span class="ow">is</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out_fmt</span><span class="p">(</span><span class="n">block</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="labelled_floats"><a class="viewcode-back" href="../../_autosummary/castep_outputs.castep_res.html#castep_outputs.castep_res.labelled_floats">[docs]</a><span class="k">def</span> <span class="nf">labelled_floats</span><span class="p">(</span><span class="n">labels</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">counts</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,),</span>
+                    <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\s+?&quot;</span><span class="p">,</span> <span class="n">suff</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Constructs a regex for extracting floats with assigned labels</span>
+<span class="sd">    :param labels:iterable of labels to label each group</span>
+<span class="sd">    :param counts:iterable of counts to group into each label (count must not exceed that of labels)</span>
+<span class="sd">    :param sep:separator between floats</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">suff</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="n">cnt</span> <span class="k">for</span> <span class="n">cnt</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Suffix and counts not currently supported&quot;</span><span class="p">)</span>
+
+    <span class="n">outstr</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">cnt</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">zip_longest</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">counts</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">cnt</span><span class="p">:</span>
+            <span class="n">outstr</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;(?:(?P&lt;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&gt;(?:</span><span class="si">{</span><span class="n">sep</span><span class="si">}{</span><span class="n">EXPNUMBER_RE</span><span class="si">}{</span><span class="n">suff</span><span class="si">}</span><span class="s2">)</span><span class="se">{{</span><span class="si">{</span><span class="n">cnt</span><span class="si">}</span><span class="se">}}</span><span class="s2">))&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">outstr</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;(?:</span><span class="si">{</span><span class="n">sep</span><span class="si">}</span><span class="s2">(?P&lt;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&gt;</span><span class="si">{</span><span class="n">EXPNUMBER_RE</span><span class="si">}</span><span class="s2">)</span><span class="si">{</span><span class="n">suff</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">return</span> <span class="n">outstr</span></div>
+
+
+<div class="viewcode-block" id="gen_table_re"><a class="viewcode-back" href="../../_autosummary/castep_outputs.castep_res.html#castep_outputs.castep_res.gen_table_re">[docs]</a><span class="k">def</span> <span class="nf">gen_table_re</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">border</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\s*&quot;</span><span class="p">,</span>
+                 <span class="o">*</span><span class="p">,</span> <span class="n">pre</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">post</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">whole_line</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Constructs a regex for matching table headers with given borders &quot;&quot;&quot;</span>
+
+    <span class="n">tab_re</span> <span class="o">=</span> <span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">border</span><span class="si">}</span><span class="s2">\s*</span><span class="si">{</span><span class="n">content</span><span class="si">}</span><span class="s2">\s*</span><span class="si">{</span><span class="n">border</span><span class="si">}</span><span class="s2">\s*&quot;</span>
+              <span class="k">if</span> <span class="n">content</span> <span class="k">else</span>
+              <span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">border</span><span class="si">}</span><span class="s2">\s*&quot;</span><span class="p">)</span>
+
+    <span class="n">tab_re</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">pre</span><span class="si">}{</span><span class="n">tab_re</span><span class="si">}{</span><span class="n">post</span><span class="si">}</span><span class="s2">\s*&quot;</span>
+
+    <span class="k">if</span> <span class="n">whole_line</span><span class="p">:</span>
+        <span class="n">tab_re</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;^</span><span class="si">{</span><span class="n">tab_re</span><span class="si">}</span><span class="s2">$&quot;</span>
+
+    <span class="k">return</span> <span class="n">tab_re</span></div>
+
+
+<span class="c1"># --- RegExes</span>
+<span class="c1"># Regexps to recognise numbers</span>
+<span class="n">FNUMBER_RE</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:[+-]?(?:\d*\.?\d+|\d+\.?\d*))&quot;</span>
+<span class="n">EXPNUMBER_RE</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;(?:</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">(?:[Ee][+-]?\d</span><span class="se">{{</span><span class="s2">1,3</span><span class="se">}}</span><span class="s2">)?)&quot;</span>
+<span class="n">INTNUMBER_RE</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:\d+)&quot;</span>
+<span class="n">NUMBER_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;(?:</span><span class="si">{</span><span class="n">EXPNUMBER_RE</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Regexp to identify extended chemical species</span>
+<span class="n">SPECIES_RE</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[A-Z][a-z]{0,2}&quot;</span>
+<span class="n">ATOM_NAME_RE</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;\b</span><span class="si">{</span><span class="n">SPECIES_RE</span><span class="si">}</span><span class="s2">(?::\w+)?\b&quot;</span>
+
+<span class="c1"># Unless we have *VERY* exotic electron shells</span>
+<span class="n">SHELL_RE</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;\d[</span><span class="si">{</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">SHELLS</span><span class="p">)</span><span class="si">}</span><span class="s2">]\d</span><span class="se">{{</span><span class="s2">0,2</span><span class="se">}}</span><span class="s2">&quot;</span>
+
+<span class="n">TAG_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;--\s*(?P&lt;tag&gt;\w+)&quot;</span><span class="p">)</span>
+
+<span class="n">EMPTY</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;^\s*$&quot;</span>
+
+<span class="c1"># Atom regexp</span>
+<span class="n">ATREG</span> <span class="o">=</span> <span class="sa">rf</span><span class="s2">&quot;(?P&lt;spec&gt;</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">)\s+(?P&lt;index&gt;\d+)&quot;</span>
+
+
+<span class="c1"># Atom reference with 3-vector</span>
+<span class="n">ATDAT3VEC</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">ATREG</span> <span class="o">+</span> <span class="n">labelled_floats</span><span class="p">(</span><span class="n">FST_D</span><span class="p">))</span>
+<span class="n">ATDATTAG</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">ATDAT3VEC</span><span class="o">.</span><span class="n">pattern</span><span class="si">}</span><span class="s2">\s*</span><span class="si">{</span><span class="n">TAG_RE</span><span class="o">.</span><span class="n">pattern</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># SCF Loop</span>
+<span class="n">SCF_LOOP_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s*(?:Initial|\d+)\s*&quot;</span>
+                         <span class="sa">rf</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;energy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fermi_energy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;energy_gain&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">?\s*&quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;time&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># PS Energy</span>
+<span class="n">PS_SHELL_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;\s*Pseudo atomic calculation performed for (?P&lt;spec&gt;</span><span class="si">{</span><span class="n">SPECIES_RE</span><span class="si">}</span><span class="s2">)(\s+</span><span class="si">{</span><span class="n">SHELL_RE</span><span class="si">}</span><span class="s2">)+&quot;</span><span class="p">)</span>
+
+<span class="c1"># PS Projector</span>
+<span class="n">PSPOT_PROJ_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?P&lt;orbital&gt;\d)(?P&lt;shell&gt;\d)(?P&lt;type&gt;U|UU|N)?&quot;</span><span class="p">)</span>
+<span class="n">UNLABELLED_PROJ_RE</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\d\d(?:UU|U|N)?&quot;</span>
+
+<span class="n">PSPOT_REFERENCE_STRUC_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    ^\s*\|\s*</span>
+<span class="s2">    (?P&lt;orb&gt;</span><span class="si">{</span><span class="n">SHELL_RE</span><span class="si">}</span><span class="s2">(?:/\d+)?)\s*</span>
+<span class="s2">    </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;occupation&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;energy&#39;</span><span class="p">))</span><span class="si">}</span>
+<span class="s2">    \s*\|\s*$</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+<span class="n">PSPOT_DEF_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    ^\s*\|\s*</span>
+<span class="s2">    (?P&lt;beta&gt;\d+|loc)\s*</span>
+<span class="s2">    (?P&lt;l&gt;\d+)\s*</span>
+<span class="s2">    (?P&lt;j&gt;\d+)?\s*</span>
+<span class="s2">    </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Rc&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">\s*</span>
+<span class="s2">    (?P&lt;scheme&gt;\w+)\s*</span>
+<span class="s2">    (?P&lt;norm&gt;\d+)</span>
+<span class="s2">    \s*\|\s*$</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="c1"># PSPot String</span>
+<span class="n">PSPOT_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;local_channel&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;core_radius&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;beta_radius&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;r_inner&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;coarse&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;medium&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;fine&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;\|?&quot;</span><span class="p">)</span>
+                      <span class="o">+</span>
+                      <span class="sa">r</span><span class="s2">&quot;\|&quot;</span>
+                      <span class="sa">rf</span><span class="s2">&quot;(?P&lt;proj&gt;</span><span class="si">{</span><span class="n">UNLABELLED_PROJ_RE</span><span class="si">}</span><span class="s2">(?::</span><span class="si">{</span><span class="n">UNLABELLED_PROJ_RE</span><span class="si">}</span><span class="s2">)*)&quot;</span>
+                      <span class="sa">rf</span><span class="s2">&quot;(?:\</span><span class="se">{{</span><span class="s2">(?P&lt;shell_swp&gt;</span><span class="si">{</span><span class="n">SHELL_RE</span><span class="si">}</span><span class="s2">(?:,</span><span class="si">{</span><span class="n">SHELL_RE</span><span class="si">}</span><span class="s2">)*)\</span><span class="se">}}</span><span class="s2">)?&quot;</span>
+                      <span class="sa">rf</span><span class="s2">&quot;\((?P&lt;opt&gt;[^)]+)\)&quot;</span>
+                      <span class="sa">rf</span><span class="s2">&quot;(?P&lt;debug&gt;#)?&quot;</span>
+                      <span class="sa">rf</span><span class="s2">&quot;(?:\[(?P&lt;shell_swp2&gt;</span><span class="si">{</span><span class="n">SHELL_RE</span><span class="si">}</span><span class="s2">(?:,</span><span class="si">{</span><span class="n">SHELL_RE</span><span class="si">}</span><span class="s2">)*)\])?&quot;</span>
+                      <span class="p">)</span>
+
+<span class="c1"># Forces block</span>
+<span class="n">FORCES_BLOCK_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">gen_table_re</span><span class="p">(</span><span class="s2">&quot;([a-zA-Z ]*)Forces&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\*+&quot;</span><span class="p">),</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+<span class="c1"># Stresses block</span>
+<span class="n">STRESSES_BLOCK_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">gen_table_re</span><span class="p">(</span><span class="s2">&quot;([a-zA-Z ]*)Stress Tensor&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\*+&quot;</span><span class="p">),</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+
+<span class="c1"># Bonds</span>
+<span class="n">BOND_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;&quot;&quot;\s*</span>
+<span class="s2">                       (?P&lt;spec1&gt;</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">)\s*(?P&lt;ind1&gt;\d+)\s*</span>
+<span class="s2">                       --\s*</span>
+<span class="s2">                       (?P&lt;spec2&gt;</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">)\s*(?P&lt;ind2&gt;\d+)\s*</span>
+<span class="s2">                       </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;population&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;length&quot;</span><span class="p">))</span><span class="si">}</span>
+<span class="s2">                       &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="c1"># Pair pot</span>
+<span class="n">PAIR_POT_RES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;two_body_one_spec&#39;</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;^(?P&lt;tag&gt;\w+)?\s*\*\s*(?P&lt;spec&gt;</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">)\s*\*\s*$&quot;</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;two_body_spec&#39;</span><span class="p">:</span>  <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;(?P&lt;spec1&gt;</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">)\s*-\s*&quot;</span>
+        <span class="sa">rf</span><span class="s2">&quot;(?P&lt;spec2&gt;</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;two_body_val&#39;</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            (?P&lt;tag&gt;\w+)?\s*\*\s*</span>
+<span class="s2">            (?P&lt;label&gt;\w+)\s*</span>
+<span class="s2">            </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;params&#39;</span><span class="p">,),</span><span class="w"> </span><span class="n">counts</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;1,4&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">\s*</span>
+<span class="s2">            [\w^/*]+\s* \* \s*</span>
+<span class="s2">            &lt;--\s*(?P&lt;type&gt;\w+)</span>
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">ASCII</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;three_body_spec&#39;</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        ^(?P&lt;tag&gt;\w+)?\s*\*\s*</span>
+<span class="s2">        (?P&lt;spec&gt;(?:</span><span class="si">{</span><span class="n">ATOM_NAME_RE</span><span class="si">}</span><span class="s2">\s*)</span><span class="se">{{</span><span class="s2">3</span><span class="se">}}</span><span class="s2">)</span>
+<span class="s2">        \s*\*\s*$&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span>
+    <span class="p">),</span>
+    <span class="s1">&#39;three_body_val&#39;</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        ^(?P&lt;tag&gt;\w+)?\s*\*\s*</span>
+<span class="s2">        (?P&lt;label&gt;\w+)\s*</span>
+<span class="s2">        </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;params&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">\s*</span>
+<span class="s2">        [\w^/*]+\s* \* \s*</span>
+<span class="s2">        &lt;--\s*(?P&lt;type&gt;\w+)</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Orbital population</span>
+<span class="n">ORBITAL_POPN_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}</span><span class="s2">\s*(?P&lt;orb&gt;[SPDF][xyz]?)&quot;</span>
+                             <span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;charge&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Regexp to identify phonon block in .castep file</span>
+<span class="n">PHONON_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    \s+\+\s+</span>
+<span class="s2">    q-pt=\s*</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">\s+</span>
+<span class="s2">    \(</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;qpt&quot;</span><span class="p">,),</span><span class="w"> </span><span class="n">counts</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,))</span><span class="si">}</span><span class="s2">\)</span>
+<span class="s2">    \s+</span>
+<span class="s2">    (</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">)\s+\+</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="n">PROCESS_PHONON_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;\s+\+\s+</span>
+<span class="s2">    (?P&lt;N&gt;\d+)\s+</span>
+<span class="s2">    (?P&lt;frequency&gt;</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">)\s*</span>
+<span class="s2">    (?P&lt;irrep&gt;[a-zA-V])?\s*</span>
+<span class="s2">    (?P&lt;intensity&gt;</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">)?\s*</span>
+<span class="s2">    (?P&lt;active&gt;[YN])?\s*</span>
+<span class="s2">    (?P&lt;raman_intensity&gt;</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">)?\s*</span>
+<span class="s2">    (?P&lt;raman_active&gt;[YN])?\s*\+&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="n">TDDFT_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;\s*\+\s*</span>
+<span class="s2">    </span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span>
+<span class="s2">    </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">))</span><span class="si">}</span>
+<span class="s2">    \s*(?P&lt;type&gt;\w+)</span>
+<span class="s2">    \s*\+TDDFT&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="n">BS_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Spin=\s*(?P&lt;spin&gt;</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">)\s*</span>
+<span class="s2">    kpt=\s*</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">\s*</span>
+<span class="s2">    \(</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;kx&quot;</span><span class="p">,</span><span class="s2">&quot;ky&quot;</span><span class="p">,</span><span class="s2">&quot;kz&quot;</span><span class="p">))</span><span class="si">}</span><span class="s2">\)\s*</span>
+<span class="s2">    kpt-group=\s*(?P&lt;kpgrp&gt;</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">)</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="n">THERMODYNAMICS_DATA_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;Cv&quot;</span><span class="p">)))</span>
+
+<span class="n">MINIMISERS_RE</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;(?:</span><span class="si">{</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">MINIMISERS</span><span class="p">))</span><span class="si">}</span><span class="s2">)&quot;</span>
+<span class="n">GEOMOPT_MIN_TABLE_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;\s*\|\s* (?P&lt;step&gt;[^|]+)&quot;</span> <span class="o">+</span>
+    <span class="n">labelled_floats</span><span class="p">((</span><span class="s2">&quot;lambda&quot;</span><span class="p">,</span> <span class="s2">&quot;Fdelta&quot;</span><span class="p">,</span> <span class="s2">&quot;enthalpy&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;\s*\|\s*&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="sa">r</span><span class="s2">&quot;\s* \|&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="n">GEOMOPT_TABLE_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;\s*\|\s* (?P&lt;parameter&gt;\S+)&quot;</span> <span class="o">+</span>
+    <span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;tolerance&#39;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;\s*\|\s*&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="sa">r</span><span class="s2">&quot;\s*\|\s* \S+ (?#Units) \s*\|\s* (?P&lt;converged&gt;No|Yes) \s*\|&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+
+<span class="c1"># Regexp to identify Mulliken ppoulation analysis line</span>
+<span class="n">POPN_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}</span><span class="s2">\s*(?P&lt;spin_sep&gt;up:)?&quot;</span> <span class="o">+</span>
+                     <span class="n">labelled_floats</span><span class="p">((</span><span class="o">*</span><span class="n">SHELLS</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">,</span> <span class="s2">&quot;charge&quot;</span><span class="p">,</span> <span class="s2">&quot;spin&quot;</span><span class="p">))</span> <span class="o">+</span>
+                     <span class="s2">&quot;?&quot;</span>   <span class="c1"># Spin is optional</span>
+                     <span class="p">)</span>
+
+<span class="n">POPN_RE_DN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s+\d+\s*dn:&quot;</span> <span class="o">+</span>
+                        <span class="n">labelled_floats</span><span class="p">((</span><span class="o">*</span><span class="n">SHELLS</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">))</span>
+                        <span class="p">)</span>
+
+<span class="c1"># Regexp for born charges</span>
+<span class="n">BORN_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s+</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}</span><span class="s2">(?P&lt;charges&gt;(?:\s*</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">)</span><span class="se">{{</span><span class="s2">3</span><span class="se">}}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="c1"># MagRes REs</span>
+<span class="n">MAGRES_RE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># &quot;Chemical Shielding Tensor&quot; 0</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*\|\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;iso&#39;</span><span class="p">,</span><span class="s1">&#39;aniso&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">\s*&quot;</span>
+               <span class="sa">rf</span><span class="s2">&quot;(?P&lt;asym&gt;</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">|N/A)\s*\|\s*&quot;</span><span class="p">),</span>
+    <span class="c1"># &quot;Chemical Shielding and Electric Field Gradient Tensor&quot; 1</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*\|\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;iso&#39;</span><span class="p">,</span><span class="s1">&#39;aniso&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">\s*&quot;</span>
+               <span class="sa">rf</span><span class="s2">&quot;(?P&lt;asym&gt;</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">|N/A)&quot;</span>
+               <span class="sa">rf</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;cq&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;eta&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">\s*\|\s*&quot;</span><span class="p">),</span>
+    <span class="c1"># &quot;Electric Field Gradient Tensor&quot; 2</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*\|\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;cq&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">\s*&quot;</span>
+               <span class="sa">rf</span><span class="s2">&quot;(?P&lt;asym&gt;</span><span class="si">{</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">|N/A)\s*\|\s*&quot;</span><span class="p">),</span>
+    <span class="c1"># &quot;(?:I|Ani)sotropic J-coupling&quot; 3</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*\|\**\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;fc&#39;</span><span class="p">,</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span><span class="s1">&#39;para&#39;</span><span class="p">,</span><span class="s1">&#39;dia&#39;</span><span class="p">,</span><span class="s1">&#39;tot&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">\s*\|\s*&quot;</span><span class="p">),</span>
+    <span class="c1"># &quot;Hyperfine Tensor&quot; 4</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*\|\s*</span><span class="si">{</span><span class="n">ATREG</span><span class="si">}{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;iso&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">\s*\|\s*&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># MagRes Tasks</span>
+<span class="n">MAGRES_TASK</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Chemical Shielding&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Chemical Shielding and Electric Field Gradient&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Electric Field Gradient&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;(An)Isotropic J-coupling&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hyperfine&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Regexp to identify block in .phonon or .phonon_dos file</span>
+<span class="n">FRACCOORDS_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*(?P&lt;index&gt;</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">)</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;u&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;w&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span>
+                           <span class="sa">rf</span><span class="s2">&quot;\s*(?P&lt;spec&gt;</span><span class="si">{</span><span class="n">SPECIES_RE</span><span class="si">}</span><span class="s2">)</span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;mass&#39;</span><span class="p">,))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">PHONON_PHONON_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    \s+q-pt=\s*</span><span class="si">{</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">\s*</span>
+<span class="s2">    </span><span class="si">{</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;qpt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pth&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">counts</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="si">}</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+
+<span class="n">PROCESS_PHONON_PHONON_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;Grad_qf&#39;</span><span class="p">)))</span>
+
+
+<span class="c1"># Regexp to identify Fermi energies in .bands file</span>
+<span class="n">BANDS_FERMI_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Fermi energ(ies|y) \(in atomic units\)\s*&quot;</span> <span class="o">+</span>
+                            <span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)))</span>
+
+<span class="c1"># Regexp to identify eigenvalue block in .bands file</span>
+<span class="c1"># BANDS_EIGENS_RE =</span>
+<span class="c1"># rf&quot;K-point\s+(\d+)\s*(\s*{FNUMBER_RE})\s*({FNUMBER_RE})\s*({FNUMBER_RE})\s*({FNUMBER_RE})&quot;</span>
+
+<span class="n">DEVEL_CODE_VAL_RE</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;[A-Za-z0-9_]+[:=]\S+&#39;</span>
+<span class="n">DEVEL_CODE_BLOCK_RE</span> <span class="o">=</span> <span class="sa">rf</span><span class="s1">&#39;([A-Za-z0-9_]+):(?:\s*</span><span class="si">{</span><span class="n">DEVEL_CODE_VAL_RE</span><span class="si">}</span><span class="s1">\s*)*:end\S+&#39;</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jacob Wilkins
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

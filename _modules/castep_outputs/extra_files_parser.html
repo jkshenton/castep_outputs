@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>castep_outputs.extra_files_parser &#8212; castep-outputs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/castep_outputs/extra_files_parser';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">castep-outputs</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    castep_outputs
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Install</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">castep outputs demo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../_autosummary/castep_outputs.html">castep_outputs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.args.html">castep_outputs.args</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.castep_file_parser.html">castep_outputs.castep_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.castep_outputs_main.html">castep_outputs.castep_outputs_main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.castep_res.html">castep_outputs.castep_res</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.cell_param_file_parser.html">castep_outputs.cell_param_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.constants.html">castep_outputs.constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.extra_files_parser.html">castep_outputs.extra_files_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.md_geom_file_parser.html">castep_outputs.md_geom_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/castep_outputs.utility.html">castep_outputs.utility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_modules/castep_outputs/extra_files_parser.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for castep_outputs.extra_files_parser</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Parse the following castep outputs:</span>
+<span class="sd">.bands</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">castep_res</span> <span class="k">as</span> <span class="n">REs</span>
+<span class="kn">from</span> <span class="nn">.castep_res</span> <span class="kn">import</span> <span class="n">get_block</span><span class="p">,</span> <span class="n">get_numbers</span><span class="p">,</span> <span class="n">labelled_floats</span><span class="p">,</span> <span class="n">ATDATTAG</span><span class="p">,</span> <span class="n">TAG_RE</span>
+<span class="kn">from</span> <span class="nn">.constants</span> <span class="kn">import</span> <span class="n">FST_D</span><span class="p">,</span> <span class="n">SND_D</span><span class="p">,</span> <span class="n">TAG_ALIASES</span><span class="p">,</span> <span class="n">TS_TYPES</span>
+<span class="kn">from</span> <span class="nn">.utility</span> <span class="kn">import</span> <span class="p">(</span><span class="n">fix_data_types</span><span class="p">,</span> <span class="n">stack_dict</span><span class="p">,</span> <span class="n">to_type</span><span class="p">,</span> <span class="n">log_factory</span><span class="p">,</span> <span class="n">atreg_to_index</span><span class="p">,</span>
+                      <span class="n">add_aliases</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="parse_regular_header"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_regular_header">[docs]</a><span class="k">def</span> <span class="nf">parse_regular_header</span><span class="p">(</span><span class="n">block</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">,</span>
+                         <span class="n">extra_opts</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse (semi-)standard castep file header block (given as iterable over lines) &quot;&quot;&quot;</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">block</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Number of&quot;</span><span class="p">):</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="s2">&quot;Unit cell vectors&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;unit_cell&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">to_type</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">block</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="nb">float</span><span class="p">)</span>
+                                 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+
+        <span class="k">elif</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">REs</span><span class="o">.</span><span class="n">FRACCOORDS_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+            <span class="n">stack_dict</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+        <span class="k">elif</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extra_opts</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">(</span><span class="n">get_numbers</span><span class="p">(</span><span class="n">line</span><span class="p">),</span> <span class="nb">float</span><span class="p">)</span>
+
+    <span class="n">fix_data_types</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                            <span class="s1">&#39;u&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                            <span class="s1">&#39;v&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                            <span class="s1">&#39;w&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                            <span class="s1">&#39;mass&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;coords&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">coords</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="parse_hug_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_hug_file">[docs]</a><span class="k">def</span> <span class="nf">parse_hug_file</span><span class="p">(</span><span class="n">hug_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .hug file &quot;&quot;&quot;</span>
+
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;compression&#39;</span><span class="p">,</span> <span class="s1">&#39;temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;pressure&#39;</span><span class="p">,</span> <span class="s1">&#39;energy&#39;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">hug_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">labelled_floats</span><span class="p">(</span><span class="n">cols</span><span class="p">),</span> <span class="n">line</span><span class="p">):</span>
+            <span class="n">stack_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+    <span class="n">fix_data_types</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">{</span><span class="n">dt</span><span class="p">:</span> <span class="nb">float</span> <span class="k">for</span> <span class="n">dt</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="parse_bands_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_bands_file">[docs]</a><span class="k">def</span> <span class="nf">parse_bands_file</span><span class="p">(</span><span class="n">bands_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .bonds file &quot;&quot;&quot;</span>
+
+    <span class="n">bands_info</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">qdata</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">bands_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">bands_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN header&quot;</span><span class="p">,</span> <span class="s2">&quot;END header&quot;</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="n">parse_regular_header</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+            <span class="n">bands_info</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;K-point&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">qdata</span><span class="p">:</span>
+                <span class="n">fix_data_types</span><span class="p">(</span><span class="n">qdata</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;qpt&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                       <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                       <span class="s1">&#39;spin_comp&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                                       <span class="s1">&#39;band&#39;</span><span class="p">:</span> <span class="nb">float</span>
+                                       <span class="p">})</span>
+                <span class="n">bands_info</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qdata</span><span class="p">)</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="o">*</span><span class="n">qpt</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">qdata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;qpt&#39;</span><span class="p">:</span> <span class="n">qpt</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="n">weight</span><span class="p">,</span> <span class="s1">&#39;spin_comp&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;band&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+
+        <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Spin component&quot;</span><span class="p">):</span>
+            <span class="n">qdata</span><span class="p">[</span><span class="s1">&#39;spin_comp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">qdata</span><span class="p">[</span><span class="s1">&#39;spin_comp&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+                <span class="n">qdata</span><span class="p">[</span><span class="s1">&#39;band_up&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">qdata</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;^\s*</span><span class="si">{</span><span class="n">REs</span><span class="o">.</span><span class="n">FNUMBER_RE</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">qdata</span><span class="p">[</span><span class="s1">&#39;spin_comp&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+                <span class="n">qdata</span><span class="p">[</span><span class="s1">&#39;band_dn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">qdata</span><span class="p">[</span><span class="s1">&#39;band&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">qdata</span><span class="p">:</span>
+        <span class="n">fix_data_types</span><span class="p">(</span><span class="n">qdata</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;qpt&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                               <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                               <span class="s1">&#39;spin_comp&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                               <span class="s1">&#39;band&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                               <span class="s1">&#39;band_up&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                               <span class="s1">&#39;band_dn&#39;</span><span class="p">:</span> <span class="nb">float</span>
+                               <span class="p">})</span>
+        <span class="n">bands_info</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qdata</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">bands_info</span></div>
+
+
+<div class="viewcode-block" id="parse_phonon_dos_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_phonon_dos_file">[docs]</a><span class="k">def</span> <span class="nf">parse_phonon_dos_file</span><span class="p">(</span><span class="n">phonon_dos_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .phonon_dos file &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=too-many-branches,redefined-outer-name</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">log_factory</span><span class="p">(</span><span class="n">phonon_dos_file</span><span class="p">)</span>
+    <span class="n">phonon_dos_info</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">phonon_dos_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">phonon_dos_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN header&quot;</span><span class="p">,</span> <span class="s2">&quot;END header&quot;</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">parse_regular_header</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>
+            <span class="n">phonon_dos_info</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">phonon_dos_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN GRADIENTS&quot;</span><span class="p">,</span> <span class="s2">&quot;END GRADIENTS&quot;</span><span class="p">):</span>
+
+            <span class="n">logger</span><span class="p">(</span><span class="s2">&quot;Found gradient block&quot;</span><span class="p">)</span>
+            <span class="n">qdata</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">fix</span><span class="p">(</span><span class="n">qdat</span><span class="p">):</span>
+                <span class="n">fix_data_types</span><span class="p">(</span><span class="n">qdat</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;qpt&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                      <span class="s1">&#39;pth&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                      <span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                                      <span class="s1">&#39;f&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                      <span class="s1">&#39;Grad_qf&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">block</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">REs</span><span class="o">.</span><span class="n">PHONON_PHONON_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">qdata</span><span class="p">:</span>
+                        <span class="n">fix</span><span class="p">(</span><span class="n">qdata</span><span class="p">)</span>
+                        <span class="n">phonon_dos_info</span><span class="p">[</span><span class="s1">&#39;gradients&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qdata</span><span class="p">)</span>
+                    <span class="n">qdata</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+                    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">qdata</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+                <span class="k">elif</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">REs</span><span class="o">.</span><span class="n">PROCESS_PHONON_PHONON_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+                    <span class="n">stack_dict</span><span class="p">(</span><span class="n">qdata</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="n">qdata</span><span class="p">:</span>
+                <span class="n">fix</span><span class="p">(</span><span class="n">qdata</span><span class="p">)</span>
+                <span class="n">phonon_dos_info</span><span class="p">[</span><span class="s1">&#39;gradients&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qdata</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">phonon_dos_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN DOS&quot;</span><span class="p">,</span> <span class="s2">&quot;END DOS&quot;</span><span class="p">,</span> <span class="n">out_fmt</span><span class="o">=</span><span class="nb">list</span><span class="p">):</span>
+
+            <span class="n">logger</span><span class="p">(</span><span class="s2">&quot;Found DOS block&quot;</span><span class="p">)</span>
+
+            <span class="n">dos</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;freq&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;si&#39;</span><span class="p">)),</span> <span class="n">line</span><span class="p">)</span>
+                <span class="n">stack_dict</span><span class="p">(</span><span class="n">dos</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="n">dos</span><span class="p">:</span>
+                <span class="n">fix_data_types</span><span class="p">(</span><span class="n">dos</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                     <span class="s1">&#39;g&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                     <span class="s1">&#39;si&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+                <span class="n">phonon_dos_info</span><span class="p">[</span><span class="s1">&#39;dos&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dos</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">phonon_dos_info</span></div>
+
+
+<div class="viewcode-block" id="parse_efield_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_efield_file">[docs]</a><span class="k">def</span> <span class="nf">parse_efield_file</span><span class="p">(</span><span class="n">efield_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .efield file &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=too-many-branches,redefined-outer-name</span>
+
+    <span class="n">efield_info</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">log_factory</span><span class="p">(</span><span class="n">efield_file</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">efield_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">efield_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN header&quot;</span><span class="p">,</span> <span class="s2">&quot;END header&quot;</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">parse_regular_header</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Oscillator Q&#39;</span><span class="p">,))</span>
+            <span class="n">efield_info</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">efield_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN Oscillator Strengths&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;END Oscillator Strengths&quot;</span><span class="p">,</span>
+                                <span class="n">out_fmt</span><span class="o">=</span><span class="nb">list</span><span class="p">):</span>
+
+            <span class="n">logger</span><span class="p">(</span><span class="s2">&quot;Found Oscillator Strengths&quot;</span><span class="p">)</span>
+
+            <span class="n">osc</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;\s*(?P&lt;freq&gt;</span><span class="si">{</span><span class="n">REs</span><span class="o">.</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="o">+</span>
+                                 <span class="n">labelled_floats</span><span class="p">([</span><span class="o">*</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;S</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">SND_D</span><span class="p">)]),</span> <span class="n">line</span><span class="p">)</span>
+                <span class="n">stack_dict</span><span class="p">(</span><span class="n">osc</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="n">osc</span><span class="p">:</span>
+                <span class="n">fix_data_types</span><span class="p">(</span><span class="n">osc</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                     <span class="o">**</span><span class="p">{</span><span class="sa">f</span><span class="s1">&#39;S</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="nb">float</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">SND_D</span><span class="p">}})</span>
+                <span class="n">efield_info</span><span class="p">[</span><span class="s1">&#39;oscillator_strengths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">osc</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">efield_file</span><span class="p">,</span> <span class="s2">&quot;BEGIN permittivity&quot;</span><span class="p">,</span> <span class="s2">&quot;END permittivity&quot;</span><span class="p">,</span>
+                                <span class="n">out_fmt</span><span class="o">=</span><span class="nb">list</span><span class="p">):</span>
+
+            <span class="n">logger</span><span class="p">(</span><span class="s2">&quot;Found permittivity&quot;</span><span class="p">)</span>
+
+            <span class="n">perm</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">labelled_floats</span><span class="p">([</span><span class="s1">&#39;freq&#39;</span><span class="p">,</span>
+                                                  <span class="o">*</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;e_r_</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">SND_D</span><span class="p">)]),</span> <span class="n">line</span><span class="p">)</span>
+                <span class="n">stack_dict</span><span class="p">(</span><span class="n">perm</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="n">perm</span><span class="p">:</span>
+                <span class="n">fix_data_types</span><span class="p">(</span><span class="n">perm</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;freq&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                                      <span class="o">**</span><span class="p">{</span><span class="sa">f</span><span class="s1">&#39;e_r_</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="nb">float</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">SND_D</span><span class="p">}})</span>
+                <span class="n">efield_info</span><span class="p">[</span><span class="s1">&#39;permittivity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">perm</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">efield_info</span></div>
+
+
+<div class="viewcode-block" id="parse_xrd_sf_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_xrd_sf_file">[docs]</a><span class="k">def</span> <span class="nf">parse_xrd_sf_file</span><span class="p">(</span><span class="n">xrd_sf_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .xrd_sf file &quot;&quot;&quot;</span>
+
+    <span class="c1"># Get headers from first line</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">xrd_sf_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">3</span><span class="p">:]</span>
+    <span class="c1"># Turn Re(x) into x_re</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">[(</span><span class="n">head</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">head</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">head</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">]</span>
+
+    <span class="n">xrd_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">rf</span><span class="s2">&quot;(?P&lt;qvec&gt;(?:\s*</span><span class="si">{</span><span class="n">REs</span><span class="o">.</span><span class="n">INTNUMBER_RE</span><span class="si">}</span><span class="s2">)</span><span class="se">{{</span><span class="s2">3</span><span class="se">}}</span><span class="s2">)&quot;</span> <span class="o">+</span>
+                        <span class="n">labelled_floats</span><span class="p">(</span><span class="n">headers</span><span class="p">))</span>
+
+    <span class="n">xrd</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">xrd_sf_file</span><span class="p">:</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">xrd_re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="n">stack_dict</span><span class="p">(</span><span class="n">xrd</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">xrd</span><span class="p">:</span>
+        <span class="n">xrd</span><span class="p">[</span><span class="s2">&quot;qvec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[[</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">qvec</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xrd</span><span class="p">[</span><span class="s2">&quot;qvec&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">qvec</span> <span class="o">:=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())]</span>
+        <span class="n">fix_data_types</span><span class="p">(</span><span class="n">xrd</span><span class="p">,</span> <span class="p">{</span><span class="n">head</span><span class="p">:</span> <span class="nb">float</span> <span class="k">for</span> <span class="n">head</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">xrd</span></div>
+
+
+<div class="viewcode-block" id="parse_elastic_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_elastic_file">[docs]</a><span class="k">def</span> <span class="nf">parse_elastic_file</span><span class="p">(</span><span class="n">elastic_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .elastic files &quot;&quot;&quot;</span>
+    <span class="n">accum</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">elastic_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">elastic_file</span><span class="p">,</span>
+                              <span class="s2">&quot;^BEGIN Elastic Constants&quot;</span><span class="p">,</span>
+                              <span class="s2">&quot;^END Elastic Constants&quot;</span><span class="p">):</span>
+
+            <span class="n">accum</span><span class="p">[</span><span class="s2">&quot;elastic_constants&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">to_type</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+                                          <span class="k">for</span> <span class="n">blk_line</span> <span class="ow">in</span> <span class="n">block</span>
+                                          <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span> <span class="o">:=</span> <span class="n">get_numbers</span><span class="p">(</span><span class="n">blk_line</span><span class="p">))]</span>
+
+        <span class="k">elif</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">elastic_file</span><span class="p">,</span>
+                                <span class="s2">&quot;^BEGIN Compliance Matrix&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;^END Compliance Matrix&quot;</span><span class="p">):</span>
+            <span class="nb">next</span><span class="p">(</span><span class="n">block</span><span class="p">)</span>  <span class="c1"># Skip Begin line w/units</span>
+
+            <span class="n">accum</span><span class="p">[</span><span class="s2">&quot;compliance_matrix&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">to_type</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+                                          <span class="k">for</span> <span class="n">blk_line</span> <span class="ow">in</span> <span class="n">block</span>
+                                          <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span> <span class="o">:=</span> <span class="n">get_numbers</span><span class="p">(</span><span class="n">blk_line</span><span class="p">))]</span>
+
+    <span class="k">return</span> <span class="n">accum</span></div>
+
+
+<div class="viewcode-block" id="parse_ts_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_ts_file">[docs]</a><span class="k">def</span> <span class="nf">parse_ts_file</span><span class="p">(</span><span class="n">ts_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .ts files &quot;&quot;&quot;</span>
+
+    <span class="n">accum</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">ts_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;TSConfirmation&quot;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+            <span class="n">accum</span><span class="p">[</span><span class="s2">&quot;confirmation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">elif</span> <span class="n">block</span> <span class="o">:=</span> <span class="n">get_block</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">ts_file</span><span class="p">,</span> <span class="s2">&quot;(REA|PRO|TST)&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;^\s*$&quot;</span><span class="p">,</span> <span class="n">eof_possible</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <span class="n">curr</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s*(?P&lt;type&gt;REA|PRO|TST)\s*\d+\s*&quot;</span> <span class="o">+</span>
+                             <span class="n">labelled_floats</span><span class="p">((</span><span class="s1">&#39;reaction_coordinate&#39;</span><span class="p">,)),</span> <span class="n">line</span><span class="p">)</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">TS_TYPES</span><span class="p">[</span><span class="n">match</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]]</span>
+            <span class="n">curr</span><span class="p">[</span><span class="s2">&quot;reaction_coordinate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="s2">&quot;reaction_coordinate&quot;</span><span class="p">],</span> <span class="nb">float</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">blk_line</span> <span class="ow">in</span> <span class="n">block</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">ATDATTAG</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">blk_line</span><span class="p">):</span>
+                    <span class="n">ion</span> <span class="o">=</span> <span class="n">atreg_to_index</span><span class="p">(</span><span class="n">match</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">ion</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">curr</span><span class="p">:</span>
+                        <span class="n">curr</span><span class="p">[</span><span class="n">ion</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="n">curr</span><span class="p">[</span><span class="n">ion</span><span class="p">][</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;tag&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">([</span><span class="o">*</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+                                                               <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">FST_D</span><span class="p">)],</span> <span class="nb">float</span><span class="p">)</span>
+                    <span class="n">add_aliases</span><span class="p">(</span><span class="n">curr</span><span class="p">[</span><span class="n">ion</span><span class="p">],</span> <span class="n">TAG_ALIASES</span><span class="p">)</span>
+
+                <span class="k">elif</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">TAG_RE</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">blk_line</span><span class="p">):</span>
+                    <span class="n">curr</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s1">&#39;tag&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="o">*</span><span class="n">to_type</span><span class="p">(</span><span class="n">get_numbers</span><span class="p">(</span><span class="n">blk_line</span><span class="p">),</span> <span class="nb">float</span><span class="p">)])</span>
+
+            <span class="n">add_aliases</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">TAG_ALIASES</span><span class="p">)</span>
+            <span class="n">accum</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">accum</span></div>
+
+
+<div class="viewcode-block" id="parse_kpt_info"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_kpt_info">[docs]</a><span class="k">def</span> <span class="nf">parse_kpt_info</span><span class="p">(</span><span class="n">inp</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">prop</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse standard form of kpt related .*_fmt files &quot;&quot;&quot;</span>
+
+    <span class="c1"># Skip header</span>
+    <span class="k">while</span> <span class="s2">&quot;END header&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">inp</span><span class="o">.</span><span class="n">readline</span><span class="p">():</span>
+        <span class="k">pass</span>
+
+    <span class="n">qdata</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">inp</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="o">*</span><span class="n">qpt</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">qpt</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">(</span><span class="n">qpt</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+            <span class="n">stack_dict</span><span class="p">(</span><span class="n">qdata</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">qpt</span><span class="p">,</span> <span class="n">prop</span><span class="p">:</span> <span class="n">val</span><span class="p">})</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">qpt</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">to_type</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">3</span><span class="p">:],</span> <span class="nb">float</span><span class="p">)</span>
+            <span class="n">stack_dict</span><span class="p">(</span><span class="n">qdata</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">qpt</span><span class="p">,</span> <span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="n">val</span><span class="p">))})</span>
+
+    <span class="k">return</span> <span class="n">qdata</span></div>
+
+
+<div class="viewcode-block" id="parse_elf_fmt_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_elf_fmt_file">[docs]</a><span class="k">def</span> <span class="nf">parse_elf_fmt_file</span><span class="p">(</span><span class="n">elf_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .elf_fmt files &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">parse_kpt_info</span><span class="p">(</span><span class="n">elf_file</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;chi_alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;chi_beta&#39;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="parse_chdiff_fmt_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_chdiff_fmt_file">[docs]</a><span class="k">def</span> <span class="nf">parse_chdiff_fmt_file</span><span class="p">(</span><span class="n">chdiff_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .chdiff_fmt files &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">parse_kpt_info</span><span class="p">(</span><span class="n">chdiff_file</span><span class="p">,</span> <span class="s1">&#39;chdiff&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_pot_fmt_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_pot_fmt_file">[docs]</a><span class="k">def</span> <span class="nf">parse_pot_fmt_file</span><span class="p">(</span><span class="n">pot_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .pot_fmt files &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">parse_kpt_info</span><span class="p">(</span><span class="n">pot_file</span><span class="p">,</span> <span class="s1">&#39;pot&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="parse_den_fmt_file"><a class="viewcode-back" href="../../_autosummary/castep_outputs.extra_files_parser.html#castep_outputs.extra_files_parser.parse_den_fmt_file">[docs]</a><span class="k">def</span> <span class="nf">parse_den_fmt_file</span><span class="p">(</span><span class="n">den_file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Parse castep .den_fmt files &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">parse_kpt_info</span><span class="p">(</span><span class="n">den_file</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jacob Wilkins
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

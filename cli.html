@@ -1,0 +1,690 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Command line interface &#8212; castep-outputs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cli';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api.html" />
+    <link rel="prev" title="castep outputs demo" href="tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">castep-outputs</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    castep_outputs
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">castep outputs demo</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Command line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="_autosummary/castep_outputs.html">castep_outputs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.args.html">castep_outputs.args</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.castep_file_parser.html">castep_outputs.castep_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.castep_outputs_main.html">castep_outputs.castep_outputs_main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.castep_res.html">castep_outputs.castep_res</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.cell_param_file_parser.html">castep_outputs.cell_param_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.constants.html">castep_outputs.constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.extra_files_parser.html">castep_outputs.extra_files_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.md_geom_file_parser.html">castep_outputs.md_geom_file_parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/castep_outputs.utility.html">castep_outputs.utility</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcli.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/cli.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Command line interface</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-arguments">Positional Arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-arguments">Named Arguments</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="command-line-interface">
+<h1>Command line interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading">#</a></h1>
+<p><dl class="simple">
+<dt>Attempts to find all files for seedname, filtered by <cite>inc</cite> args (default: all).</dt><dd><p>Explicit files can be passed using longname arguments.
+castep_outputs can parse most human-readable castep outputs including: .castep, .param, .cell, .geom, .md, .bands, .hug, .phonon_dos, .efield, .xrd_sf, .elf_fmt, .chdiff_fmt, .pot_fmt, .den_fmt, .elastic, .ts</p>
+</dd>
+</dl>
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">castep_outputs</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">V</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">L</span> <span class="p">{</span><span class="n">DEBUG</span><span class="p">,</span><span class="n">INFO</span><span class="p">,</span><span class="n">WARNING</span><span class="p">,</span><span class="n">ERROR</span><span class="p">,</span><span class="n">CRITICAL</span><span class="p">}]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">OUTPUT</span><span class="p">]</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="p">{</span><span class="n">json</span><span class="p">,</span><span class="n">ruamel</span><span class="p">,</span><span class="n">yaml</span><span class="p">,</span><span class="n">pprint</span><span class="p">,</span><span class="nb">print</span><span class="p">}]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">A</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">b</span><span class="p">]</span>
+                      <span class="p">[</span><span class="o">-</span><span class="n">p</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">H</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">E</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">C</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">P</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">D</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">X</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">T</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">inc</span><span class="o">-</span><span class="n">param</span><span class="p">]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">inc</span><span class="o">-</span><span class="n">cell</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">castep</span> <span class="p">[</span><span class="n">CASTEP</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">geom</span> <span class="p">[</span><span class="n">GEOM</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">cell</span> <span class="p">[</span><span class="n">CELL</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">param</span> <span class="p">[</span><span class="n">PARAM</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">md</span> <span class="p">[</span><span class="n">MD</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">bands</span> <span class="p">[</span><span class="n">BANDS</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">hug</span> <span class="p">[</span><span class="n">HUG</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">phonon_dos</span> <span class="p">[</span><span class="n">PHONON_DOS</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">efield</span> <span class="p">[</span><span class="n">EFIELD</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">xrd_sf</span> <span class="p">[</span><span class="n">XRD_SF</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">elf_fmt</span> <span class="p">[</span><span class="n">ELF_FMT</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">chdiff_fmt</span> <span class="p">[</span><span class="n">CHDIFF_FMT</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">pot_fmt</span> <span class="p">[</span><span class="n">POT_FMT</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">den_fmt</span> <span class="p">[</span><span class="n">DEN_FMT</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">elastic</span> <span class="p">[</span><span class="n">ELASTIC</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">ts</span> <span class="p">[</span><span class="n">TS</span> <span class="o">...</span><span class="p">]]</span>
+                      <span class="o">...</span>
+</pre></div>
+</div>
+<section id="positional-arguments">
+<h2>Positional Arguments<a class="headerlink" href="#positional-arguments" title="Permalink to this heading">#</a></h2>
+<dl class="option-list">
+<dt><kbd>seedname</kbd></dt>
+<dd><p>Seed name for data</p>
+</dd>
+</dl>
+</section>
+<section id="named-arguments">
+<h2>Named Arguments<a class="headerlink" href="#named-arguments" title="Permalink to this heading">#</a></h2>
+<dl class="option-list">
+<dt><kbd>-V, --version</kbd></dt>
+<dd><p>show program’s version number and exit</p>
+</dd>
+<dt><kbd>-L, --log</kbd></dt>
+<dd><p>Possible choices: DEBUG, INFO, WARNING, ERROR, CRITICAL</p>
+<p>Verbose output</p>
+<p>Default: “WARNING”</p>
+</dd>
+<dt><kbd>-o, --output</kbd></dt>
+<dd><p>File to write output, default: screen</p>
+</dd>
+<dt><kbd>-f, --out-format</kbd></dt>
+<dd><p>Possible choices: json, ruamel, yaml, pprint, print</p>
+<p>Output format</p>
+<p>Default: “json”</p>
+</dd>
+<dt><kbd>-t, --testing</kbd></dt>
+<dd><p>Set testing mode to produce flat outputs</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-A, --inc-all</kbd></dt>
+<dd><p>Extract all available information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-c, --inc-castep</kbd></dt>
+<dd><p>Extract .castep information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-g, --inc-geom</kbd></dt>
+<dd><p>Extract .geom information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-m, --inc-md</kbd></dt>
+<dd><p>Extract .md information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-b, --inc-bands</kbd></dt>
+<dd><p>Extract .bands information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-p, --inc-phonon_dos</kbd></dt>
+<dd><p>Extract .phonon_dos information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-e, --inc-efield</kbd></dt>
+<dd><p>Extract .efield information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-x, --inc-xrd_sf</kbd></dt>
+<dd><p>Extract .xrd_sf information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-H, --inc-hug</kbd></dt>
+<dd><p>Extract .hug information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-E, --inc-elf_fmt</kbd></dt>
+<dd><p>Extract .elf_fmt information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-C, --inc-chdiff_fmt</kbd></dt>
+<dd><p>Extract .chdiff_fmt information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-P, --inc-pot_fmt</kbd></dt>
+<dd><p>Extract .pot_fmt information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-D, --inc-den_fmt</kbd></dt>
+<dd><p>Extract .den_fmt information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-X, --inc-elastic</kbd></dt>
+<dd><p>Extract .elastic information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>-T, --inc-ts</kbd></dt>
+<dd><p>Extract .ts information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>--inc-param</kbd></dt>
+<dd><p>Extract .param information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>--inc-cell</kbd></dt>
+<dd><p>Extract .cell information</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>--castep</kbd></dt>
+<dd><p>Extract from CASTEP as .castep type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--geom</kbd></dt>
+<dd><p>Extract from GEOM as .geom type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--cell</kbd></dt>
+<dd><p>Extract from CELL as .cell type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--param</kbd></dt>
+<dd><p>Extract from PARAM as .param type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--md</kbd></dt>
+<dd><p>Extract from MD as .md type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--bands</kbd></dt>
+<dd><p>Extract from BANDS as .bands type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--hug</kbd></dt>
+<dd><p>Extract from HUG as .hug type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--phonon_dos</kbd></dt>
+<dd><p>Extract from PHONON_DOS as .phonon_dos type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--efield</kbd></dt>
+<dd><p>Extract from EFIELD as .efield type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--xrd_sf</kbd></dt>
+<dd><p>Extract from XRD_SF as .xrd_sf type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--elf_fmt</kbd></dt>
+<dd><p>Extract from ELF_FMT as .elf_fmt type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--chdiff_fmt</kbd></dt>
+<dd><p>Extract from CHDIFF_FMT as .chdiff_fmt type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--pot_fmt</kbd></dt>
+<dd><p>Extract from POT_FMT as .pot_fmt type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--den_fmt</kbd></dt>
+<dd><p>Extract from DEN_FMT as .den_fmt type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--elastic</kbd></dt>
+<dd><p>Extract from ELASTIC as .elastic type</p>
+<p>Default: []</p>
+</dd>
+<dt><kbd>--ts</kbd></dt>
+<dd><p>Extract from TS as .ts type</p>
+<p>Default: []</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">castep outputs demo</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="api.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#positional-arguments">Positional Arguments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#named-arguments">Named Arguments</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jacob Wilkins
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
