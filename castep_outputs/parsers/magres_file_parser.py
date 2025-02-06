@@ -8,7 +8,7 @@ import castep_outputs.utilities.castep_res as REs
 
 from ..utilities.datatypes import AtomIndex, ThreeByThreeMatrix, ThreeVector
 from ..utilities.filewrapper import Block
-from ..utilities.utility import add_aliases, determine_type, to_type, atreg_to_index
+from ..utilities.utility import add_aliases, atreg_to_index, determine_type, to_type
 
 MAGRES_ALIASES = {
         "ms": "magnetic_shielding",
@@ -70,6 +70,7 @@ class UnitsInfo(TypedDict):
 
 class MagresInfo(TypedDict):
     """NMR Magnetic response information."""
+
     #: Ion (atom) coordinates.
     ions: dict[AtomIndex, ThreeVector]
     calc_code: Literal["CASTEP"]
@@ -266,7 +267,7 @@ def _process_magres_old_block(block: Block) -> dict[str, str | ThreeByThreeMatri
     for match in coords_matches:
         index = atreg_to_index(match)
         if index not in found_atoms:
-            data["atoms"]["coords"][index] = to_type(match['val'].split(), float)
+            data["atoms"]["coords"][index] = to_type(match["val"].split(), float)
             found_atoms.add(index)
 
     perturbing_index = None
